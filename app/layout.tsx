@@ -10,8 +10,8 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://samcerts.co.uk"),
   title: {
-    default: "SAMCERTS Ltd | Property Certificates",
-    template: "%s | SAMCERTS Ltd",
+default: "SamCerts Ltd | Property Certificates",
+template: "%s | SamCerts Ltd",
   },
   description:
     "Fast and reliable EPCs, gas safety certificates, EICRs, floor plans, fire safety assessments and property compliance reports.",
