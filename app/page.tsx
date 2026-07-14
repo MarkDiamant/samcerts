@@ -1,4 +1,5 @@
-import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
+import Header from "@/components/Header";
 
 const clientLoginUrl = "https://app.samcerts.co.uk/account/sign-in";
 
@@ -96,51 +97,7 @@ export default function Home() {
   return (
     <>
       <main>
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8 lg:px-10">
-          <a
-            href="#top"
-            aria-label="SamCerts Ltd home"
-            className="flex shrink-0 items-center"
-          >
-            <Image
-              src="/samcerts-logo.png"
-              alt="SamCerts Ltd Property Certificates"
-              width={260}
-              height={100}
-              className="h-auto w-40 sm:w-48"
-              priority
-            />
-          </a>
-
-          <nav
-            aria-label="Main navigation"
-            className="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex"
-          >
-            <a className="transition hover:text-sky-700" href="#services">
-              Services
-            </a>
-            <a className="transition hover:text-sky-700" href="#why-us">
-              Why SamCerts
-            </a>
-            <a className="transition hover:text-sky-700" href="#process">
-              How it works
-            </a>
-            <a className="transition hover:text-sky-700" href="#contact">
-              Contact
-            </a>
-          </nav>
-
-          <a
-            href={clientLoginUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sky-700 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-sky-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 sm:px-6"
-          >
-            Client Login
-          </a>
-        </div>
-      </header>
+        <Header clientLoginUrl={clientLoginUrl} />
 
       <section
         id="top"
@@ -633,117 +590,9 @@ export default function Home() {
                 Complete the form and we will respond as soon as possible.
               </p>
 
-              <form className="mt-7 grid gap-5">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-2 block text-sm font-bold text-slate-700"
-                    >
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      autoComplete="name"
-                      required
-                      className="min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-sky-600 focus:ring-4 focus:ring-sky-100"
-                      placeholder="Your name"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="mb-2 block text-sm font-bold text-slate-700"
-                    >
-                      Phone
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      autoComplete="tel"
-                      className="min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-sky-600 focus:ring-4 focus:ring-sky-100"
-                      placeholder="Phone number"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-sm font-bold text-slate-700"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-sky-600 focus:ring-4 focus:ring-sky-100"
-                    placeholder="you@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="mb-2 block text-sm font-bold text-slate-700"
-                  >
-                    Service required
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    defaultValue=""
-                    className="min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 text-slate-950 outline-none transition focus:border-sky-600 focus:ring-4 focus:ring-sky-100"
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    {services.map((service) => (
-                      <option key={service.title} value={service.title}>
-                        {service.title}
-                      </option>
-                    ))}
-                    <option value="Not sure">Not sure</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-bold text-slate-700"
-                  >
-                    Property details
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-sky-600 focus:ring-4 focus:ring-sky-100"
-                    placeholder="Tell us about the property and what you require"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="inline-flex min-h-13 items-center justify-center rounded-xl bg-sky-700 px-6 py-3 font-bold text-white shadow-sm transition hover:bg-sky-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700"
-                >
-                  Send Enquiry
-                </button>
-
-                <p className="text-sm leading-6 text-slate-500">
-                  The form will be activated before launch. For now, please call
-                  or email SamCerts directly.
-                </p>
-              </form>
+              <ContactForm
+                services={services.map((service) => service.title)}
+              />
             </div>
           </div>
         </div>
