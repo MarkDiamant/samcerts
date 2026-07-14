@@ -99,7 +99,7 @@ export default function Home() {
       <main>
         <Header clientLoginUrl={clientLoginUrl} />
 
-      <section
+        <section
         id="top"
         className="relative overflow-hidden bg-slate-50"
       >
@@ -668,9 +668,28 @@ export default function Home() {
               © {new Date().getFullYear()} SamCerts Ltd. All rights reserved.
             </p>
 
-            <p className="mt-3 sm:mt-0">
-              Website by Diamant Solutions
-            </p>
+            <a
+              href="https://diamantsolutions.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-3 flex flex-col items-center gap-1 transition hover:opacity-80 sm:mt-0 sm:items-end"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-slate-400">
+                  Built by
+                </span>
+
+                <img
+                  src="/diamant-solutions-logo.svg"
+                  alt="Diamant Solutions"
+                  className="h-6 w-auto"
+                />
+              </div>
+
+              <span className="text-xs text-slate-500">
+                Websites • Systems • Automation
+              </span>
+            </a>
           </div>
         </div>
       </footer>
