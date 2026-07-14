@@ -16,11 +16,11 @@ template: "%s | SamCerts Ltd",
   description:
     "Fast and reliable EPCs, gas safety certificates, EICRs, floor plans, fire safety assessments and property compliance reports.",
   openGraph: {
-    title: "SAMCERTS Ltd | Property Certificates",
+    title: "SamCerts Ltd | Property Certificates",
     description:
       "Professional property certificates and compliance reports for landlords, agents, property managers and homeowners.",
     url: "https://samcerts.co.uk",
-    siteName: "SAMCERTS Ltd",
+    siteName: "SamCerts Ltd",
     locale: "en_GB",
     type: "website",
   },
