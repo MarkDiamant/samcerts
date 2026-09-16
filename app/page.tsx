@@ -687,7 +687,7 @@ export default function Home() {
               </div>
 
               <span className="text-xs text-slate-500">
-                Websites • Systems • Automation
+                Websites • CRM Systems • Direction
               </span>
             </a>
           </div>
