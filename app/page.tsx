@@ -672,23 +672,26 @@ export default function Home() {
               href="https://diamantsolutions.co.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-3 flex flex-col items-center gap-1 transition hover:opacity-80 sm:mt-0 sm:items-end"
+              className="group mt-3 flex flex-col items-center gap-0.5 text-center transition hover:opacity-80 sm:mt-0"
             >
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-slate-400">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-[11px] font-medium text-slate-400">
                   Built by
                 </span>
 
                 <img
                   src="/diamant-solutions-logo.svg"
                   alt="Diamant Solutions"
-                  className="h-6 w-auto"
+                  className="h-auto w-[100px] rounded bg-[#172536] px-[5px] py-[3px]"
                 />
               </div>
 
-              <span className="text-xs text-slate-500">
+              <span className="text-[9px] leading-tight text-slate-500">
                 Websites • CRM Systems • Direction
               </span>
+              <strong className="text-[10px] leading-tight font-bold text-green-500">
+                Want something built?
+              </strong>
             </a>
           </div>
         </div>
