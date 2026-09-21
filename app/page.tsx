@@ -687,7 +687,7 @@ export default function Home() {
               </div>
 
               <span className="text-[9px] leading-tight text-slate-500">
-                Websites • CRM Systems • Direction
+                Websites • Business Software • Direction
               </span>
               <strong className="text-[10px] leading-tight font-bold text-green-500">
                 Want something built?
